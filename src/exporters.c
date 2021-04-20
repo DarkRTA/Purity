@@ -24,35 +24,35 @@ void export_base16(FILE *f, char *name)
 	fprintf(
 		f,
 		"base08: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(RED, 2))); // red
+		Color_to_int(Color_get_hue_shade(RED, 0))); // red
 	fprintf(
 		f,
 		"base09: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(BLUE, 2))); // orange
+		Color_to_int(Color_get_hue_shade(BLUE, 0))); // orange
 	fprintf(
 		f,
 		"base0A: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(BLUE, 2))); // yellow
+		Color_to_int(Color_get_hue_shade(BLUE, 0))); // yellow
 	fprintf(
 		f,
 		"base0B: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(GREEN, 2))); // green
+		Color_to_int(Color_get_hue_shade(GREEN, 0))); // green
 	fprintf(
 		f,
 		"base0C: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(BLUE, 2))); // cyan
+		Color_to_int(Color_get_hue_shade(BLUE, 0))); // cyan
 	fprintf(
 		f,
 		"base0D: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(CYAN, 2))); // blue
+		Color_to_int(Color_get_hue_shade(CYAN, 0))); // blue
 	fprintf(
 		f,
 		"base0E: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(ORANGE, 2))); // violet
+		Color_to_int(Color_get_hue_shade(ORANGE, 0))); // violet
 	fprintf(
 		f,
 		"base0F: \"%06x\"\n",
-		Color_to_int(Color_get_hue_shade(BLUE, 2))); // magenta
+		Color_to_int(Color_get_hue_shade(BLUE, 0))); // magenta
 }
 
 void export_text(FILE *f, char *name)
@@ -67,24 +67,24 @@ void export_text(FILE *f, char *name)
 	fprintf(f, "6: #%06x\n", Color_to_int(Color_get_gray_shade(6)));
 	fprintf(f, "7: #%06x\n", Color_to_int(Color_get_gray_shade(7)));
 	fputs("-- Color Pallete --\n", f);
-	fprintf(f, "Red:      #%06x\n", Color_to_int(Color_get_hue_shade(RED, 2)));
-	fprintf(f, "Blue:     #%06x\n", Color_to_int(Color_get_hue_shade(BLUE, 2)));
-	fprintf(f, "Green:    #%06x\n", Color_to_int(Color_get_hue_shade(GREEN, 2)));
+	fprintf(f, "Red:      #%06x\n", Color_to_int(Color_get_hue_shade(RED, 0)));
+	fprintf(f, "Blue:     #%06x\n", Color_to_int(Color_get_hue_shade(BLUE, 0)));
+	fprintf(f, "Green:    #%06x\n", Color_to_int(Color_get_hue_shade(GREEN, 0)));
 	fprintf(
 		f,
 		"Yellow:   #%06x\n",
-		Color_to_int(Color_get_hue_shade(YELLOW, 2)));
+		Color_to_int(Color_get_hue_shade(YELLOW, 0)));
 	fprintf(
 		f,
 		"Orange:   #%06x\n",
-		Color_to_int(Color_get_hue_shade(ORANGE, 2)));
-	fprintf(f, "Cyan:     #%06x\n", Color_to_int(Color_get_hue_shade(CYAN, 2)));
+		Color_to_int(Color_get_hue_shade(ORANGE, 0)));
+	fprintf(f, "Cyan:     #%06x\n", Color_to_int(Color_get_hue_shade(CYAN, 0)));
 	fprintf(
 		f,
 		"Magenta:  #%06x\n",
-		Color_to_int(Color_get_hue_shade(MAGENTA, 2)));
+		Color_to_int(Color_get_hue_shade(MAGENTA, 0)));
 	fprintf(
 		f,
 		"Violet:   #%06x\n",
-		Color_to_int(Color_get_hue_shade(VIOLET, 2)));
+		Color_to_int(Color_get_hue_shade(VIOLET, 0)));
 }

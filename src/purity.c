@@ -17,6 +17,7 @@ int main(int argc, char **argv)
 	for (struct Exporter *out = EXPORTERS; out->name != NULL; out++) {
 		char *file;
 		asprintf(&file, "./dist/%s/purity-void.%s", out->name, out->ext);
+		printf("writing file: %s\n", file);
 		FILE *f = fopen(file, "w+");
 		out->fn(f, "Purity Void");
 		free(file);
@@ -26,8 +27,20 @@ int main(int argc, char **argv)
 	for (struct Exporter *out = EXPORTERS; out->name != NULL; out++) {
 		char *file;
 		asprintf(&file, "./dist/%s/purity-mass.%s", out->name, out->ext);
+		printf("writing file: %s\n", file);
 		FILE *f = fopen(file, "w+");
 		out->fn(f, "Purity Mass");
+		free(file);
+		fclose(f);
+	}
+	INVERT = 0;
+	PASTEL = 1;
+	for (struct Exporter *out = EXPORTERS; out->name != NULL; out++) {
+		char *file;
+		asprintf(&file, "./dist/%s/purity-pastel.%s", out->name, out->ext);
+		printf("writing file: %s\n", file);
+		FILE *f = fopen(file, "w+");
+		out->fn(f, "Purity Pastel");
 		free(file);
 		fclose(f);
 	}
