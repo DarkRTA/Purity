@@ -9,5 +9,6 @@ struct Exporter {
 
 void export_base16(FILE *f, char *name);
 void export_text(FILE *f, char *name);
+void export_css(FILE *f, char *name);
 
 extern struct Exporter EXPORTERS[];

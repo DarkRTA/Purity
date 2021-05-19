@@ -1,5 +1,5 @@
 CC      := cc
-CFLAGS  := -Isrc -Ideps -I. -MMD -g
+CFLAGS  := -Isrc -Ideps -I. -MMD -g -O2
 LDFLAGS := -lm
 
 OBJ = $(patsubst %.c,obj/%.o,$(shell find src deps -type f -name *.c))

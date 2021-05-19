@@ -13,6 +13,7 @@ The theme comes in 3 variations:
 # Supported Export Formats
 
 * base16 (use a base16 builder)
+* css
 * plain text
 
 ## Building.
